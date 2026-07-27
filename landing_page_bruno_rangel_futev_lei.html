@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Rangel - O Sensei do Futevôlei | Aulas em Pelotas</title>
+    <meta name="description" content="Aprenda futevôlei com o Professor Bruno Rangel (Tropa do Sensei). Aulas para todos os níveis na SkyFit Três Vendas e Lagoa Clube Beach em Pelotas.">
+    <meta name="keywords" content="futevôlei, professor de futevôlei, Bruno Rangel, Pelotas, Tropa do Sensei, aulas de futevôlei, SkyFit, Lagoa Clube Beach">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bruno Rangel - O Sensei do Futevôlei">
+    <meta property="og:description" content="Evolua seu jogo com a Tropa do Sensei. Aulas personalizadas em Pelotas.">
+    <meta property="og:image" content="SaveClip.App_662589950_18120267262620854_4506203515846019782_n.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (via CDN para arquivo único) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0A1128', // Azul muito escuro
+                            primary: '#1E3A8A', // Azul marinho
+                            light: '#00B4D8', // Azul claro/Ciano vibrante
+                            accent: '#F3F4F6' // Cinza muito claro para fundos
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        
+        /* Ocultar barra de rolagem em carrosséis */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Animações de entrada (Scroll Reveal) */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s ease-out; }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease-out; }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        /* Timeline customizada */
+        .timeline-line::before {
+            content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 2px;
+            background: linear-gradient(to bottom, #00B4D8, #1E3A8A); z-index: 0;
+        }
+        @media (min-width: 1024px) {
+            .timeline-line::before { left: 50%; transform: translateX(-50%); }
+        }
+
+        /* Efeito no botão do WhatsApp flutuante */
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wpp-float { animation: pulse-wpp 2s infinite; }
+    </style>
+</head>
+<body class="bg-brand-accent text-gray-800 antialiased selection:bg-brand-light selection:text-white">
+
+    <a href="https://wa.me/5553991551529?text=Olá%20Sensei,%20gostaria%20de%20agendar%20uma%20aula!" target="_blank" rel="noopener noreferrer" class="wpp-float fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header id="header" class="fixed w-full top-0 z-40 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-white font-heading font-bold text-2xl tracking-tighter flex items-center gap-2 group">
+                <i class="fas fa-volleyball text-brand-light group-hover:rotate-180 transition-transform duration-700"></i>
+                Bruno<span class="text-brand-light">Rangel</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#sobre" class="text-white hover:text-brand-light font-medium transition-colors">Sobre</a>
+                <a href="#modalidades" class="text-white hover:text-brand-light font-medium transition-colors">Modalidades</a>
+                <a href="#locais" class="text-white hover:text-brand-light font-medium transition-colors">Locais</a>
+                <a href="#faq" class="text-white hover:text-brand-light font-medium transition-colors">FAQ</a>
+                <a href="https://wa.me/5553991551529?text=Olá%20Sensei,%20gostaria%20de%20agendar%20uma%20aula!" target="_blank" class="bg-brand-light hover:bg-brand-primary text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(0,180,216,0.4)] hover:shadow-[0_0_20px_rgba(0,180,216,0.6)]">
+                    Agende sua Aula
+                </a>
+            </nav>
+
+            <!-- Botão Menu Mobile -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/95 backdrop-blur-md transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 z-50">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#sobre" class="mobile-link text-white text-2xl font-heading font-semibold hover:text-brand-light">Sobre</a>
+            <a href="#modalidades" class="mobile-link text-white text-2xl font-heading font-semibold hover:text-brand-light">Modalidades</a>
+            <a href="#locais" class="mobile-link text-white text-2xl font-heading font-semibold hover:text-brand-light">Locais</a>
+            <a href="#faq" class="mobile-link text-white text-2xl font-heading font-semibold hover:text-brand-light">FAQ</a>
+            <a href="https://wa.me/5553991551529?text=Olá%20Sensei,%20gostaria%20de%20agendar%20uma%20aula!" class="mobile-link bg-brand-light text-white px-8 py-3 rounded-full font-bold text-xl mt-4">
+                Falar com o Sensei
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative h-screen min-h-[700px] flex items-center lg:items-center pt-20 lg:pt-0 overflow-hidden">
+            <!-- Background com a foto de camisa preta -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/90 via-brand-dark/70 to-transparent z-10 lg:bg-gradient-to-r lg:from-brand-dark/95 lg:via-brand-dark/50 lg:to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 to-transparent z-10 lg:hidden"></div>
+                <!-- Foto em retrato: bg-top e cover para alinhar ao topo e não cortar a cabeça -->
+                <div class="w-full h-full bg-cover bg-top bg-no-repeat lg:bg-fixed" style="background-image: url('SaveClip.App_669953838_18120267280620854_4944969790681930709_n.jpg');"></div>
+            </div>
+
+            <div class="container mx-auto px-6 max-w-7xl relative z-20 flex flex-col items-start justify-center h-full text-left">
+                <div class="max-w-2xl reveal-left">
+                    <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-brand-light font-semibold text-sm mb-6 backdrop-blur-sm shadow-lg">
+                        <i class="fas fa-medal"></i> TROPA DO SENSEI 🥋
+                    </span>
+                    <h1 class="text-4xl lg:text-6xl font-heading font-bold text-white leading-tight mb-6">
+                        Aprenda Futevôlei com quem <span class="text-brand-light">vive o esporte.</span>
+                    </h1>
+                    <p class="text-lg text-gray-200 mb-8 font-light leading-relaxed">
+                        Aulas para iniciantes, intermediários e atletas. Evolua sua técnica, condicionamento físico e eleve seu desempenho nas quadras de areia.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                        <a href="https://wa.me/5553991551529?text=Olá%20Sensei,%20gostaria%20de%20agendar%20uma%20aula%20experimental!" target="_blank" class="bg-brand-light hover:bg-[#0096b4] text-white text-center px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-brand-light/50 flex items-center justify-center gap-2 text-lg">
+                            Agendar Aula Experimental <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/5553991551529?text=Olá%20Sensei,%20quero%20tirar%20uma%20dúvida!" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-center px-8 py-4 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                            <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mouse scroll icon indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 hidden lg:flex flex-col items-center animate-bounce opacity-70">
+                <span class="text-white text-xs mb-2 tracking-widest uppercase">Rolar</span>
+                <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
+                    <div class="w-1 h-2 bg-brand-light rounded-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-24 bg-white relative overflow-hidden">
+            <!-- Decoração de fundo abstrata -->
+            <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-brand-light/5 rounded-full blur-3xl"></div>
+            
+            <div class="container mx-auto px-6 max-w-7xl relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    
+                    <!-- Imagem do Professor (Camisa Azul) -->
+                    <div class="w-full lg:w-5/12 reveal-left relative">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
+                            <!-- Foto ajustada para portrait, focando do meio pra cima -->
+                            <img src="SaveClip.App_662589950_18120267262620854_4506203515846019782_n.jpg" alt="Professor Bruno Rangel sorrindo com a bola" class="w-full h-[550px] object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-60"></div>
+                        </div>
+                        
+                        <!-- Badges flutuantes -->
+                        <div class="absolute -bottom-6 -right-4 lg:-right-10 bg-white p-5 rounded-2xl shadow-xl z-20 flex items-center gap-4 animate-[bounce_4s_infinite]">
+                            <div class="w-12 h-12 rounded-full bg-brand-light/10 flex items-center justify-center text-brand-light text-xl">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium">Comunidade Ativa</p>
+                                <p class="text-brand-dark font-heading font-bold text-xl">+15.7k Seguidores</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conteúdo Sobre -->
+                    <div class="w-full lg:w-7/12 reveal-right">
+                        <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">Conheça o Professor</h2>
+                        <h3 class="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">Bruno Rangel</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Conhecido nas areias como o <strong>Sensei do Futevôlei</strong>, minha missão é transformar a maneira como você joga e se relaciona com o esporte. A <span class="font-bold text-brand-primary">Tropa do Sensei</span> não é apenas um grupo de alunos, é uma comunidade de pessoas apaixonadas por evolução, saúde e pela energia única que a praia e a quadra proporcionam.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-light/10 flex items-center justify-center text-brand-primary shrink-0">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-brand-dark">Metodologia Própria</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Treinos dinâmicos focados em técnica real de jogo.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-brand-light/10 flex items-center justify-center text-brand-primary shrink-0">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-brand-dark">Organizador</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Idealizador do Circuito Pelotense de Futevôlei.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.instagram.com/brunorangelfutevolei/" target="_blank" class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-light transition-colors group">
+                            Siga no Instagram <i class="fab fa-instagram group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="py-24 bg-brand-accent">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">Por que treinar conosco?</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark">Muito além de jogar bola</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Benefício 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal group">
+                        <div class="w-14 h-14 bg-brand-accent group-hover:bg-brand-primary transition-colors duration-300 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-level-up-alt text-2xl text-brand-primary group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-heading font-semibold text-brand-dark mb-3">Evolução Técnica</h4>
+                        <p class="text-gray-600">Correção de postura, domínio de bola, passes precisos e ataques eficientes desde a primeira aula.</p>
+                    </div>
+                    
+                    <!-- Benefício 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal group" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-brand-accent group-hover:bg-brand-primary transition-colors duration-300 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-heartbeat text-2xl text-brand-primary group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-heading font-semibold text-brand-dark mb-3">Condicionamento</h4>
+                        <p class="text-gray-600">Treinos intensos na areia que melhoram seu cardio, força, explosão e queima calórica.</p>
+                    </div>
+
+                    <!-- Benefício 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal group" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-brand-accent group-hover:bg-brand-primary transition-colors duration-300 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-2xl text-brand-primary group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-heading font-semibold text-brand-dark mb-3">Turmas Reduzidas</h4>
+                        <p class="text-gray-600">Atenção máxima do professor em cada movimento seu, garantindo um aprendizado muito mais rápido.</p>
+                    </div>
+
+                    <!-- Benefício 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal group">
+                        <div class="w-14 h-14 bg-brand-accent group-hover:bg-brand-primary transition-colors duration-300 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-smile text-2xl text-brand-primary group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-heading font-semibold text-brand-dark mb-3">Ambiente Descontraído</h4>
+                        <p class="text-gray-600">A Tropa do Sensei é uma família. Treine se divertindo, faça amigos e tire o estresse do dia a dia.</p>
+                    </div>
+
+                    <!-- Benefício 5 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal group" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-brand-accent group-hover:bg-brand-primary transition-colors duration-300 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-layer-group text-2xl text-brand-primary group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-heading font-semibold text-brand-dark mb-3">Todos os Níveis</h4>
+                        <p class="text-gray-600">Nunca tocou na bola? Já joga e quer competir? Temos a turma e a metodologia exata para você.</p>
+                    </div>
+
+                    <!-- Benefício 6 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 reveal group" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-brand-accent group-hover:bg-brand-primary transition-colors duration-300 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-clipboard-check text-2xl text-brand-primary group-hover:text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-heading font-semibold text-brand-dark mb-3">Treino Personalizado</h4>
+                        <p class="text-gray-600">Planejamento focado nos seus pontos fracos e nos seus objetivos dentro do esporte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modalidades" class="py-24 bg-brand-dark text-white relative">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">Escolha seu formato</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold mb-4">Planos de Aula</h3>
+                    <p class="text-gray-400">Opções flexíveis para você encaixar o esporte na sua rotina e bolso.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Mod 1 -->
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300 reveal group">
+                        <i class="fas fa-user text-3xl text-brand-light mb-4"></i>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Individual</h4>
+                        <p class="text-gray-400 text-sm mb-6">Evolução acelerada com foco 100% exclusivo do Sensei em você.</p>
+                        <a href="https://wa.me/5553991551529?text=Quero%20saber%20sobre%20aulas%20individuais" class="block w-full py-3 px-4 rounded-xl border border-brand-light text-brand-light text-center font-semibold group-hover:bg-brand-light group-hover:text-white transition-all">Saber Valores</a>
+                    </div>
+                    <!-- Mod 2 -->
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300 reveal group">
+                        <i class="fas fa-user-friends text-3xl text-brand-light mb-4"></i>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Em Dupla</h4>
+                        <p class="text-gray-400 text-sm mb-6">Traga seu parceiro de jogo. Treine táticas de dupla com custo reduzido.</p>
+                        <a href="https://wa.me/5553991551529?text=Quero%20saber%20sobre%20aulas%20em%20dupla" class="block w-full py-3 px-4 rounded-xl border border-brand-light text-brand-light text-center font-semibold group-hover:bg-brand-light group-hover:text-white transition-all">Saber Valores</a>
+                    </div>
+                    <!-- Mod 3 -->
+                    <div class="bg-gradient-to-b from-brand-primary to-brand-dark border border-brand-primary p-8 rounded-3xl reveal relative transform md:-translate-y-4 shadow-[0_10px_30px_rgba(30,58,138,0.5)]">
+                        <div class="absolute top-0 right-0 bg-brand-light text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-3xl uppercase tracking-wider text-brand-dark">Mais Popular</div>
+                        <i class="fas fa-users text-3xl text-brand-light mb-4"></i>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Em Grupo</h4>
+                        <p class="text-gray-300 text-sm mb-6">Turmas de até 4 pessoas por quadra. Dinamismo, jogo e muita energia.</p>
+                        <a href="https://wa.me/5553991551529?text=Quero%20saber%20sobre%20aulas%20em%20grupo" class="block w-full py-3 px-4 rounded-xl bg-brand-light text-white text-center font-semibold hover:bg-white hover:text-brand-dark transition-all">Ver Horários</a>
+                    </div>
+                    <!-- Mod 4 -->
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300 reveal group">
+                        <i class="fas fa-medal text-3xl text-brand-light mb-4"></i>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Competitivo</h4>
+                        <p class="text-gray-400 text-sm mb-6">Focado em tática de jogo, situações de pressão e preparação para torneios.</p>
+                        <a href="https://wa.me/5553991551529?text=Quero%20treinar%20para%20campeonatos" class="block w-full py-3 px-4 rounded-xl border border-brand-light text-brand-light text-center font-semibold group-hover:bg-brand-light group-hover:text-white transition-all">Saber Mais</a>
+                    </div>
+                    <!-- Mod 5 -->
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300 reveal group">
+                        <i class="fas fa-running text-3xl text-brand-light mb-4"></i>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Prep. Física</h4>
+                        <p class="text-gray-400 text-sm mb-6">Treinos funcionais na areia focados em mobilidade e explosão pro Futevôlei.</p>
+                        <a href="https://wa.me/5553991551529?text=Quero%20saber%20sobre%20preparação%20física" class="block w-full py-3 px-4 rounded-xl border border-brand-light text-brand-light text-center font-semibold group-hover:bg-brand-light group-hover:text-white transition-all">Saber Mais</a>
+                    </div>
+                    <!-- Mod 6 -->
+                    <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors duration-300 reveal group">
+                        <i class="fas fa-bullseye text-3xl text-brand-light mb-4"></i>
+                        <h4 class="text-2xl font-heading font-bold mb-2">Clínica</h4>
+                        <p class="text-gray-400 text-sm mb-6">Aulas esporádicas focadas em um fundamento (ex: só pingo, só peito, saque).</p>
+                        <a href="https://wa.me/5553991551529?text=Como%20funcionam%20as%20clínicas?" class="block w-full py-3 px-4 rounded-xl border border-brand-light text-brand-light text-center font-semibold group-hover:bg-brand-light group-hover:text-white transition-all">Saber Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-brand-primary font-semibold tracking-wider uppercase text-sm mb-2">Jornada do Aluno</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark">Como funcionam as aulas?</h3>
+                </div>
+
+                <div class="relative timeline-line">
+                    <!-- Etapa 1 -->
+                    <div class="flex flex-col lg:flex-row items-center justify-between mb-12 relative z-10 reveal">
+                        <div class="hidden lg:block w-5/12 text-right pr-12">
+                            <h4 class="text-2xl font-heading font-bold text-brand-dark mb-2">Entre em contato</h4>
+                            <p class="text-gray-600">Chame no WhatsApp, tire suas dúvidas e conheça os planos disponíveis.</p>
+                        </div>
+                        <div class="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-10 h-10 rounded-full bg-brand-light border-4 border-white flex items-center justify-center text-white font-bold shadow-lg">1</div>
+                        <div class="w-full lg:w-5/12 pl-16 lg:pl-12 lg:hidden mb-4">
+                            <h4 class="text-xl font-heading font-bold text-brand-dark mb-1">Entre em contato</h4>
+                            <p class="text-gray-600 text-sm">Chame no WhatsApp, tire suas dúvidas e conheça os planos.</p>
+                        </div>
+                        <div class="hidden lg:block w-5/12"></div>
+                    </div>
+
+                    <!-- Etapa 2 -->
+                    <div class="flex flex-col lg:flex-row items-center justify-between mb-12 relative z-10 reveal">
+                        <div class="hidden lg:block w-5/12"></div>
+                        <div class="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-10 h-10 rounded-full bg-brand-primary border-4 border-white flex items-center justify-center text-white font-bold shadow-lg">2</div>
+                        <div class="w-full lg:w-5/12 pl-16 lg:pl-12 text-left">
+                            <h4 class="text-2xl font-heading font-bold text-brand-dark mb-2">Agende a Experimental</h4>
+                            <p class="text-gray-600">Escolha o melhor local (SkyFit ou Lagoa) e horário para fazer sua primeira aula na areia.</p>
+                        </div>
+                    </div>
+
+                    <!-- Etapa 3 -->
+                    <div class="flex flex-col lg:flex-row items-center justify-between mb-12 relative z-10 reveal">
+                        <div class="hidden lg:block w-5/12 text-right pr-12">
+                            <h4 class="text-2xl font-heading font-bold text-brand-dark mb-2">Avaliação Técnica</h4>
+                            <p class="text-gray-600">O Sensei avalia seu nível para te colocar na turma certa ou montar seu treino individual.</p>
+                        </div>
+                        <div class="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-10 h-10 rounded-full bg-brand-light border-4 border-white flex items-center justify-center text-white font-bold shadow-lg">3</div>
+                        <div class="w-full lg:w-5/12 pl-16 lg:pl-12 lg:hidden mb-4">
+                            <h4 class="text-xl font-heading font-bold text-brand-dark mb-1">Avaliação Técnica</h4>
+                            <p class="text-gray-600 text-sm">O Sensei avalia seu nível para te direcionar ao melhor treino.</p>
+                        </div>
+                        <div class="hidden lg:block w-5/12"></div>
+                    </div>
+
+                    <!-- Etapa 4 -->
+                    <div class="flex flex-col lg:flex-row items-center justify-between relative z-10 reveal">
+                        <div class="hidden lg:block w-5/12"></div>
+                        <div class="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 w-10 h-10 rounded-full bg-brand-dark border-4 border-white flex items-center justify-center text-white font-bold shadow-lg">4</div>
+                        <div class="w-full lg:w-5/12 pl-16 lg:pl-12 text-left">
+                            <h4 class="text-2xl font-heading font-bold text-brand-dark mb-2">Evolução Contínua</h4>
+                            <p class="text-gray-600">Entre para a Tropa, treine forte, participe dos campeonatos e veja seu jogo decolar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="locais" class="py-24 bg-brand-accent">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <!-- Banner Circuito -->
+                <div class="bg-gradient-to-r from-brand-primary to-brand-dark rounded-3xl p-8 md:p-12 mb-16 text-center shadow-xl reveal">
+                    <h3 class="text-white text-2xl md:text-3xl font-heading font-bold mb-4">
+                        <i class="fas fa-trophy text-brand-light mr-2"></i> Organizador Oficial
+                    </h3>
+                    <p class="text-gray-200 text-lg mb-6 max-w-2xl mx-auto">
+                        O Sensei também é idealizador e organizador do <strong class="text-white">Circuito Pelotense de Futevôlei</strong>. Preparamos nossos atletas não só para o lazer, mas para a competição.
+                    </p>
+                    <a href="https://www.instagram.com/circuitopelotensedefutevolei/" target="_blank" class="inline-block bg-white text-brand-primary font-bold py-3 px-8 rounded-full hover:scale-105 transition-transform">
+                        Conheça o Circuito <i class="fab fa-instagram ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">Onde a mágica acontece</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark">Nossas Arenas</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Local 1: SkyFit -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow reveal">
+                        <div class="h-64 w-full bg-gray-200 relative">
+                            <!-- Mapa Embed Genérico usando endereço para buscar -->
+                            <iframe src="https://maps.google.com/maps?q=SkyFit%20Tres%20Vendas%20Pelotas%20Av.%20Fernando%20Osorio&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-map-marker-alt text-brand-light text-2xl"></i>
+                                <h4 class="text-2xl font-heading font-bold text-brand-dark">SkyFit Três Vendas</h4>
+                            </div>
+                            <p class="text-gray-600 mb-4"><i class="fas fa-map-pin mr-2 w-4"></i> Av. Fernando Osório, 2014a - Pelotas/RS</p>
+                            <div class="flex items-center justify-between mt-6 pt-6 border-t border-gray-100">
+                                <a href="https://www.instagram.com/skyfit24hspelotastresvendas/" target="_blank" class="text-sm text-brand-primary hover:underline font-medium"><i class="fab fa-instagram mr-1"></i> @skyfit24hspelotastresvendas</a>
+                                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">Arena 24h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Local 2: Lagoa Clube -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow reveal" style="transition-delay: 100ms;">
+                        <div class="h-64 w-full bg-gray-200 relative">
+                            <!-- Mapa Embed -->
+                            <iframe src="https://maps.google.com/maps?q=Laranjal%20Pelotas&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-umbrella-beach text-brand-light text-2xl"></i>
+                                <h4 class="text-2xl font-heading font-bold text-brand-dark">Lagoa Clube Beach</h4>
+                            </div>
+                            <p class="text-gray-600 mb-4"><i class="fas fa-map-pin mr-2 w-4"></i> Praia do Laranjal - Pelotas/RS</p>
+                            <div class="flex items-center justify-between mt-6 pt-6 border-t border-gray-100">
+                                <a href="https://www.instagram.com/lagoaclube.beach/" target="_blank" class="text-sm text-brand-primary hover:underline font-medium"><i class="fab fa-instagram mr-1"></i> @lagoaclube.beach</a>
+                                <span class="bg-blue-100 text-brand-primary text-xs font-bold px-3 py-1 rounded-full">Beira da Praia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Imagens -->
+        <section class="py-16 bg-brand-dark overflow-hidden">
+            <div class="container mx-auto px-6 max-w-7xl mb-12 text-center reveal">
+                <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">Galeria do Sensei</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-white">Momentos na Areia & Competições</h3>
+            </div>
+
+            <!-- Grid com destaque para as fotos reais do Bruno Rangel + fotos de apoio da modalidade -->
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Foto Destaque 1: Bruno Rangel na postura de saque/foco (Foto Real) -->
+                    <div class="relative overflow-hidden rounded-2xl group h-80 reveal shadow-xl">
+                        <img src="SaveClip.App_669953838_18120267280620854_4944969790681930709_n.jpg" alt="Bruno Rangel Foco no Jogo" class="w-full h-full object-cover object-top group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="bg-brand-light/90 text-white text-xs font-bold px-2.5 py-1 rounded-md">Sensei em Ação</span>
+                            <h4 class="font-heading font-bold text-lg mt-1">Concentração & Saque</h4>
+                        </div>
+                    </div>
+
+                    <!-- Foto Destaque 2: Bruno Rangel Uniforme Azul (Foto Real) -->
+                    <div class="relative overflow-hidden rounded-2xl group h-80 reveal shadow-xl" style="transition-delay: 100ms;">
+                        <img src="SaveClip.App_662589950_18120267262620854_4506203515846019782_n.jpg" alt="Bruno Rangel Professor de Futevôlei" class="w-full h-full object-cover object-top group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="bg-brand-primary/90 text-white text-xs font-bold px-2.5 py-1 rounded-md">Treinos Diários</span>
+                            <h4 class="font-heading font-bold text-lg mt-1">Tropa do Sensei</h4>
+                        </div>
+                    </div>
+
+                    <!-- Foto de Apoio 1: Jogo na praia -->
+                    <div class="relative overflow-hidden rounded-2xl group h-80 reveal shadow-xl" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aula de Futevôlei na praia" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="bg-brand-light/90 text-white text-xs font-bold px-2.5 py-1 rounded-md">Lagoa Clube Beach</span>
+                            <h4 class="font-heading font-bold text-lg mt-1">Aulas na Areia</h4>
+                        </div>
+                    </div>
+
+                    <!-- Foto de Apoio 2: Arena/Campeonato -->
+                    <div class="relative overflow-hidden rounded-2xl group h-80 reveal shadow-xl" style="transition-delay: 300ms;">
+                        <img src="https://images.unsplash.com/photo-1541252818617-e9a039757691?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Circuito Pelotense de Futevôlei" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-md">Circuito Pelotense</span>
+                            <h4 class="font-heading font-bold text-lg mt-1">Torneios & Competição</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-6 max-w-7xl">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">O que dizem os alunos</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark">A Tropa do Sensei</h3>
+                </div>
+
+                <!-- Carrossel -->
+                <div class="flex overflow-x-auto gap-6 pb-12 hide-scrollbar snap-x snap-mandatory cursor-grab active:cursor-grabbing" id="testimonial-carousel">
+                    <!-- Depoimento 1 -->
+                    <div class="min-w-[300px] md:min-w-[400px] bg-brand-accent p-8 rounded-3xl snap-center shrink-0">
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Nunca tinha jogado e o Bruno teve muita paciência. A didática dele é incrível, hoje já consigo brincar e participar dos jogos no final de semana!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold">M</div>
+                            <div>
+                                <h5 class="font-heading font-bold text-brand-dark">Matheus S.</h5>
+                                <p class="text-xs text-gray-500">Aluno Iniciante</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="min-w-[300px] md:min-w-[400px] bg-brand-accent p-8 rounded-3xl snap-center shrink-0">
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Treino pra competir e os ajustes finos que o Sensei faz no meu jogo fazem toda diferença nos campeonatos. Treino intenso e de altíssimo nível."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-light text-white flex items-center justify-center font-bold">L</div>
+                            <div>
+                                <h5 class="font-heading font-bold text-brand-dark">Lucas P.</h5>
+                                <p class="text-xs text-gray-500">Atleta Avançado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] bg-brand-accent p-8 rounded-3xl snap-center shrink-0">
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"A energia da Tropa é sensacional. Além de perder peso e ganhar condicionamento, fiz vários amigos nas aulas. Melhor hora do meu dia!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold">A</div>
+                            <div>
+                                <h5 class="font-heading font-bold text-brand-dark">Amanda G.</h5>
+                                <p class="text-xs text-gray-500">Aluna Intermediária</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Depoimento 4 -->
+                    <div class="min-w-[300px] md:min-w-[400px] bg-brand-accent p-8 rounded-3xl snap-center shrink-0">
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"Fazer aula na Lagoa com o Bruno mudou minha qualidade de vida. Treinar na beira da praia com a melhor orientação não tem preço."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold">R</div>
+                            <div>
+                                <h5 class="font-heading font-bold text-brand-dark">Rafael C.</h5>
+                                <p class="text-xs text-gray-500">Aluno Iniciante</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dica mobile -->
+                <p class="text-center text-gray-400 text-sm mt-4 lg:hidden"><i class="fas fa-arrows-alt-h"></i> Deslize para ver mais</p>
+            </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-brand-accent">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-brand-light font-semibold tracking-wider uppercase text-sm mb-2">Dúvidas Frequentes</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-brand-dark">Tudo que você precisa saber</h3>
+                </div>
+
+                <div class="space-y-4 reveal">
+                    <!-- Pergunta 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-heading font-semibold text-brand-dark text-lg">Preciso saber jogar para começar?</span>
+                            <i class="fas fa-chevron-down text-brand-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-6 py-5 text-gray-600">
+                                Absolutamente não! Temos turmas exclusivas para iniciantes que estão tendo o primeiro contato com a bola. O Professor Bruno utiliza uma metodologia progressiva para você aprender desde o básico com total segurança e diversão.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-heading font-semibold text-brand-dark text-lg">Qual a idade mínima para as aulas?</span>
+                            <i class="fas fa-chevron-down text-brand-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-6 py-5 text-gray-600">
+                                Recomendamos a partir dos 10 anos de idade, pois exige um mínimo de desenvolvimento motor para os saltos e domínio na areia. Não há limite máximo de idade, o esporte é para todos!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 3 -->
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-heading font-semibold text-brand-dark text-lg">Preciso levar minha própria bola?</span>
+                            <i class="fas fa-chevron-down text-brand-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-6 py-5 text-gray-600">
+                                Não. A Tropa do Sensei fornece todo o material necessário para os treinos: bolas oficiais (Mikasa), marcações, cones e elásticos. Você só precisa vir com roupa de treino, água e disposição!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pergunta 4 -->
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-heading font-semibold text-brand-dark text-lg">Como funciona a aula experimental?</span>
+                            <i class="fas fa-chevron-down text-brand-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50">
+                            <div class="px-6 py-5 text-gray-600">
+                                Basta entrar em contato pelo WhatsApp. Vamos alinhar seu nível (iniciante, intermediário, etc) e encontrar um horário na SkyFit ou no Lagoa Clube para você fazer uma aula prática. É a melhor forma de conhecer a nossa metodologia.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-24 relative overflow-hidden bg-brand-dark">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('SaveClip.App_669953838_18120267280620854_4944969790681930709_n.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+            
+            <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center reveal">
+                <h2 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+                    Comece hoje sua evolução no <span class="text-brand-light">Futevôlei.</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-10 font-light">
+                    Junte-se à Tropa do Sensei. Vagas limitadas nas turmas da manhã e noite.
+                </p>
+                <a href="https://wa.me/5553991551529?text=Olá%20Sensei,%20estou%20pronto%20para%20começar!" target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebd59] text-white text-xl font-bold py-5 px-10 rounded-full transition-transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.4)]">
+                    <i class="fab fa-whatsapp text-2xl"></i> Falar com o Sensei
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#050813] text-white pt-16 pb-8 border-t border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Col 1: Marca -->
+                <div>
+                    <a href="#" class="text-white font-heading font-bold text-3xl tracking-tighter flex items-center gap-2 mb-6">
+                        <i class="fas fa-volleyball text-brand-light"></i>
+                        Bruno<span class="text-brand-light">Rangel</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Aulas de Futevôlei em Pelotas/RS.<br>Formando atletas, promovendo saúde e construindo uma comunidade apaixonada pelo esporte.
+                    </p>
+                </div>
+
+                <!-- Col 2: Contato -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Contato</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>
+                            <a href="https://wa.me/5553991551529" class="hover:text-brand-light transition-colors flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-brand-light"></i> (53) 99155-1529
+                            </a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt text-brand-light mt-1"></i>
+                            <span>SkyFit Três Vendas<br>Lagoa Clube Beach</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Redes Sociais da Tropa -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Acompanhe nas Redes</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="https://www.instagram.com/brunorangelfutevolei/" target="_blank" class="text-gray-400 hover:text-brand-light transition-colors flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram"></i> @brunorangelfutevolei
+                        </a>
+                        <a href="https://www.instagram.com/circuitopelotensedefutevolei/" target="_blank" class="text-gray-400 hover:text-brand-light transition-colors flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram"></i> @circuitopelotensedefutevolei
+                        </a>
+                        <a href="https://www.instagram.com/skyfit24hspelotastresvendas/" target="_blank" class="text-gray-400 hover:text-brand-light transition-colors flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram"></i> @skyfit24hspelotastresvendas
+                        </a>
+                        <a href="https://www.instagram.com/lagoaclube.beach/" target="_blank" class="text-gray-400 hover:text-brand-light transition-colors flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram"></i> @lagoaclube.beach
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="year"></span> Bruno Rangel Futevôlei. Todos os direitos reservados.
+                </p>
+                <div class="text-gray-500 text-sm flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Atualizar ano no footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Menu Mobile Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('translate-x-full');
+                document.body.classList.toggle('overflow-hidden');
+            };
+
+            mobileBtn.addEventListener('click', toggleMenu);
+            closeBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+            // Header Background on Scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.remove('bg-transparent', 'py-4');
+                    header.classList.add('bg-brand-dark/95', 'backdrop-blur-md', 'py-2', 'shadow-lg');
+                } else {
+                    header.classList.add('bg-transparent', 'py-4');
+                    header.classList.remove('bg-brand-dark/95', 'backdrop-blur-md', 'py-2', 'shadow-lg');
+                }
+            });
+
+            // Scroll Reveal Animation (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Opcional: parar de observar após a primeira vez para manter visível
+                        // revealObserver.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // FAQ Accordion Logic
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('i');
+                    
+                    // Fecha todos os outros
+                    document.querySelectorAll('.faq-content').forEach(item => {
+                        if (item !== content) {
+                            item.style.maxHeight = null;
+                            item.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                            item.previousElementSibling.classList.remove('text-brand-primary');
+                        }
+                    });
+
+                    // Abre/Fecha o atual
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('rotate-180');
+                        button.classList.remove('text-brand-primary');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add('rotate-180');
+                        button.classList.add('text-brand-primary');
+                    }
+                });
+            });
+
+            // Lógica Básica de Drag para o Carrossel (Desktop)
+            const carousel = document.getElementById('testimonial-carousel');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carousel.classList.add('active:cursor-grabbing');
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            });
+            carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+                carousel.classList.remove('active:cursor-grabbing');
+            });
+            carousel.addEventListener('mouseup', () => {
+                isDown = false;
+                carousel.classList.remove('active:cursor-grabbing');
+            });
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 2; // Velocidade do drag
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>
